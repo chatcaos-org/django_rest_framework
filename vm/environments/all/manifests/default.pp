@@ -117,6 +117,14 @@ package {'django':
         require => Package["python3-pip"],
 }
 
+package {'djangorestframework-filters':
+        provider => pip3,
+        ensure => present,
+        name => "djangorestframework-filters",
+        require => Package["python3-pip"],
+}
+
+
 package {'djangorestframework':
         provider => pip3,
         ensure => present,
