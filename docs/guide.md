@@ -27,3 +27,33 @@ https://en.wikipedia.org/wiki/Hypertext
 https://www.ietf.org/rfc/rfc2616.txt
 https://pt.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
+
+Django rest framework
+
+Projeto open source mantido pela comunidade pelas informações de seu repositório no github o projeto está ativo desde 2010
+Basicamente utiliza mais dois projeto Markdown e django-filter.
+
+Neste screen cast além tecnologias adjacentes que auxiliam na criação deste ambiente de teste. 
+
+Vamos entender qual é a alternativa para construção de uma api rest com django em python.
+
+Como dito anteriormente utilizaremos o framework Django rest framework
+
+
+Partindo do principio que temos a necessidade de expor uma coleção de dados sob http e decidimos pela melhor opção e vamos implementar uma api rest.
+
+Utilizaremos as três principais classes para tal:
+ - FilterSet;
+ - Serializer;
+ - Viewset;
+
+Com esta estrutura sob uma aplicação django, vamos conseguir expor nossa API de forma segura e aderente ao padrão REST.
+
+Primeiro passo
+
+Configuração do settings.
+
+
+colinha:
+docker run -d -p 5432:5432 -p 8000:8000 -v /home/claudio/projects/csantos/django_rest_framework/src:/src_code --name hdson_rest hdson_rest
+docker exec --user root -it hdson_rest bash
