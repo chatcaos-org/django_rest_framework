@@ -51,7 +51,15 @@ Com esta estrutura sob uma aplicação django, vamos conseguir expor nossa API d
 
 Primeiro passo
 
-Configuração do settings.
+Configuração do settings. OK
+Montar Modelo. OK
+Montar Serializer
+Montar View
+Montar Route
+
+Django-filter que nada... 
+https://github.com/philipn/django-rest-framework-filters
+
 
 
 colinha:
