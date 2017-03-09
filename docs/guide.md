@@ -28,6 +28,10 @@ https://www.ietf.org/rfc/rfc2616.txt
 https://pt.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
 
+
+
+
+
 Django rest framework
 
 Projeto open source mantido pela comunidade pelas informações de seu repositório no github o projeto está ativo desde 2010
@@ -39,29 +43,44 @@ Vamos entender qual é a alternativa para construção de uma api rest com djang
 
 Como dito anteriormente utilizaremos o framework Django rest framework
 
-
 Partindo do principio que temos a necessidade de expor uma coleção de dados sob http e decidimos pela melhor opção e vamos implementar uma api rest.
 
 Utilizaremos as três principais classes para tal:
+ - DefaultRouter
+ - Viewset;
  - FilterSet;
  - Serializer;
- - Viewset;
 
 Com esta estrutura sob uma aplicação django, vamos conseguir expor nossa API de forma segura e aderente ao padrão REST.
 
-Primeiro passo
 
-Configuração do settings. OK
-Montar Modelo. OK
-Montar Serializer
-Montar View
-Montar Route
+Criar copia do projeto `start_hdson_rest`
+
+Criar Container:
+
+``` bash
+docker run -d -p 5432:5432 -p 8000:8000 -v /home/claudio/projects/csantos/django_rest_framework/src:/src_code --name hdson_rest_live hdson_rest
+
+docker exec --user root -it hdson_rest_live bash
+```
+
+Criar App Blog
+
+Criar as rotas em urls.py dentro da app blog
+
+Criar o models.py para blog com as classes Post e Comment
+ - cria e faz as migrations;
+
+Criar os viewsets.py em blog com as classes PostViewSet e CommentViewSet
+
+Criar o module serializers.py para blog com as classes PostSerializer e CommmentSerializer
+
+Criar o FilterSet
+
+Criar os links
+   from rest_framework.reverse import reverse
+
+    http://www.django-rest-framework.org/api-guide/viewsets/#modelviewset
 
 Django-filter que nada... 
 https://github.com/philipn/django-rest-framework-filters
-
-
-
-colinha:
-docker run -d -p 5432:5432 -p 8000:8000 -v /home/claudio/projects/csantos/django_rest_framework/src:/src_code --name hdson_rest hdson_rest
-docker exec --user root -it hdson_rest bash
